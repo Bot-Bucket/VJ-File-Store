@@ -58,10 +58,10 @@ async def gen_link_s(bot, message):
 @Client.on_message(filters.command(['batch', 'pbatch']))
 async def gen_link_batch(bot, message):
     if " " not in message.text:
-        return await message.reply("Use correct format.\nExample /batch Your File.")
+        return await message.reply("Use correct format.\nExample /batch https://t.me/Bucket_Bots/10 https://t.me/Bucket_Bots/20.")
     links = message.text.strip().split(" ")
     if len(links) != 3:
-        return await message.reply("Use correct format.\nExample /batch Your File.")
+        return await message.reply("Use correct format.\nExample https://t.me/Bucket_Bots/10 https://t.me/Bucket_Bots/20.")
     cmd, first, last = links
     regex = re.compile("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")
     match = regex.match(first)
