@@ -11,6 +11,7 @@ from pyrogram.types import Message
 from pyrogram.errors.exceptions.bad_request_400 import AccessTokenExpired, AccessTokenInvalid
 from config import API_ID, API_HASH, ADMINS, DB_NAME
 from config import DB_URI as MONGO_URL
+from plugins.clone import restart_bots
 
 mongo_client = MongoClient(MONGO_URL)
 mongo_db = mongo_client["cloned_vjbotz"]
